@@ -1,0 +1,195 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 4rem 6rem;
+  font-size: 1.8rem;
+  z-index: 10000;
+
+  .logo {
+    font-size: 3.1rem;
+    line-height: 1.4rem;
+
+    & a {
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      letter-spacing: 0.2rem;
+      transition: 0.6s;
+      & span {
+        color: $brand-color;
+        @include respond(medium) {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond(medium) {
+      display: none;
+    }
+
+    & li {
+      position: relative;
+      list-style: none;
+
+      & a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 200;
+        transition: 0.6s;
+
+        &:hover {
+          color: $brand-color;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+// ! Changing the menu when open with X
+// !changing from open to active
+.navbar__menu.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $brand-color;
+  transition: all 0.5s ease-in-out;
+
+  & li {
+    margin-bottom: 3rem;
+
+    & a {
+      position: relative;
+      margin: 0 15px;
+      font-size: 3rem;
+      text-decoration: none;
+      color: white;
+      letter-spacing: 2px;
+      font-weight: 400;
+      transition: 0.6s;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        color: goldenrod;
+        font-size: 3.6rem;
+      }
+    }
+  }
+}
+
+// ! Sticky Navbar start
+.navbar.sticky {
+  padding: 4rem 6rem;
+  background-color: $brand-color;
+  @include respond(medium) {
+    padding: 4rem 6rem;
+  }
+  .logo {
+    & span {
+      color: $color-white;
+    }
+  }
+  & a {
+    transition: .5s;
+   
+
+    &:hover {
+      color: $color-white;
+      font-weight: 300;
+    }
+  }
+}
+
+
+// ! Sticky Navbar end
+
+// ! Menu burger start
+.navbar__toggler {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: 6rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  @include respond(medium) {
+    display: flex;
+  }
+
+  // ?Gives a background to the burger
+  border: 3px solid $brand-color;
+  // background: rgba(255, 68, 0, 0.753);
+  border-radius: 50%;
+
+  &-burger {
+    height: 2px;
+    width: 2rem;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5x rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 2rem;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 0 2px 5x rgba(255, 101, 47, 0.2);
+      transition: all 0.5s ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(-0.5rem);
+    }
+
+    &::after {
+      transform: translateY(0.5rem);
+    }
+  }
+}
+
+// ! Menu burger end
+// ? Animation X start
+.navbar__toggler {
+  &-burger.open {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+
+    &.open::before {
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    &.open::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
+  }
+}
+
+// ? Animation X end

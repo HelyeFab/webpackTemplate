@@ -1,0 +1,112 @@
+.carousel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: $paddingStandard * 1.2;
+
+
+
+}
+
+
+.carousel__firstRow,
+.carousel__secondRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    width: 100%;
+    padding: $paddingStandard;
+    margin-top:$marginStandard;
+  
+    overflow: hidden;
+
+
+  
+
+
+    .carouselItem {
+        height: 41rem;
+        width: 24rem;
+        position: relative;
+
+         @include respond(phone) {
+             width: 100%;
+             margin-bottom: $marginStandard;
+         }
+
+
+         & img {
+
+             height: 100%;
+             width:  100%;
+             object-fit: cover;
+         }
+        
+
+}
+}
+
+
+
+
+.imgOverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 24rem;
+    top: 0;
+    left: 0;
+    @include respond(phone) {
+        width: 100%;
+        
+    }
+
+
+
+ 
+
+    & span{
+        font-size: $fontStandard * 1.3;
+        color: white;
+    }
+    
+    
+}
+
+.fa-star {
+    color: $brand-color;
+    font-size: $fontStandard * 1.3;
+
+}
+
+.money {
+    padding-top: 100px;
+}
+
+.imgOverlay {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.imgOverlay:hover {
+    opacity: 1;
+    transform: translateY(-.1rem);
+    background: rgba(13, 13, 37, .3);
+    transition: 0.5s;
+}
+
+
+
+
+.carousel__secondRow {
+    margin-top: $marginStandard * 2;
+
+}
+
+
+

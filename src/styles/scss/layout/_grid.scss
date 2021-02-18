@@ -1,0 +1,150 @@
+.grid {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: .2fr 1fr 1fr .8fr;
+    grid-gap: 1rem;
+    @include gridMaster;
+
+    @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+
+
+
+   
+}
+
+
+.gridSecondary {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    @include gridSecondary;
+    
+
+
+
+
+
+    @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+}
+
+
+.gridSecondaryReverse {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: .2fr 1fr 1fr .8fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    @include gridSecondaryReverse;
+
+
+
+    @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+}
+
+
+
+
+
+
+//! HTML Start
+// <div class="gridCarousel"><div class="gridItem item1"><div class="imgOverlay"><span class="name">+</span></div></div><div class="gridItem item2"><div class="imgOverlay"><span class="name">+</span></div></div><div class="gridItem item3"><div class="imgOverlay"><span class="name">+</span></div></div><div class="gridItem item4"><div class="imgOverlay"><span class="name">+</span></div></div><div class="gridItem item5"><div class="imgOverlay"><span class="name">+</span></div></div><div class="gridItem item6"><div class="imgOverlay"><span class="name">+</span></div></div></div>
+//! HTML End
+
+.gridCarousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    min-height: 80rem;
+    min-width: 40rem;
+    grid-gap: 1rem;
+    grid-template-areas:
+
+        "cont1  cont2   cont3"
+        "cont4  cont2   cont5"
+        "cont4  cont6   cont5";
+
+
+}
+
+
+.gridItem {}
+
+.gridItem img {
+    display: block;
+    object-fit: cover;
+
+
+}
+
+.item1 {
+    grid-area: cont1;
+    background-image: url('/img/hair1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+
+}
+
+.item2 {
+    grid-area: cont2;
+    background-image: url('/img/hair2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.item3 {
+    grid-area: cont3;
+    background-image: url('/img/hair3.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.item4 {
+    grid-area: cont4;
+    background-image: url('/img/hair4.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.item5 {
+    grid-area: cont5;
+    background-image: url('/img/hair5.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.item6 {
+    grid-area: cont6;
+    background-image: url('/img/hair6.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}

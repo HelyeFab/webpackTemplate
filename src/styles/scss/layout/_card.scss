@@ -1,0 +1,16 @@
+.card {
+    width: 96%;
+    height: 100%;
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 4rem;
+    background-color: $light-grey;
+    @include boxShadow-light;
+    
+
+
+
+
+}
+
+

@@ -1,0 +1,30 @@
+.imgOverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.imgOverlay span {
+    font-size: 10rem;
+    color: white;
+}
+
+
+.imgOverlay {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.imgOverlay:hover {
+    opacity: 1;
+    transform: translateY(-0.1rem);
+    background: rgba(13, 13, 37, 0.527);
+    transition: 0.5s;
+}

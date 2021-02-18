@@ -1,0 +1,30 @@
+.col__layout{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    &-visual{
+        min-width: 40%;
+        @include respond(xsmall) {
+          min-width: 0%;
+
+        }
+    }
+      &-text {
+          min-width: 60%;
+           @include respond(xsmall) {
+             min-width: 100%;
+
+           }
+      }
+
+}
+
+
+
+
+
+
+
+

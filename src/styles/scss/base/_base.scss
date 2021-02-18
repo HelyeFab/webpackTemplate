@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html{
+  font-size: 62.5%;
+
+   @include respond(medium) {
+     font-size: 56.25%;//1rem = 9px, 9/16 = 56.25%
+     
+   }
+
+   @include respond(large) {
+     font-size: 50% //1rem = 8px, 8/16 = 50%
+   }
+
+
+
+   @include respond(xlarge) {
+     font-size: 75% //1rem = 12px, 12/16 = 75%
+   }
+
+   @include respond(xxlarge) {
+     font-size: 80% //1rem = 16px, 12/16 = 75%
+   }
+}
+
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+   
+}
+
+

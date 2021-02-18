@@ -1,0 +1,40 @@
+.about {
+  padding: 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  font-size: $fontStandard;
+  &__content {
+      width: 90%;
+    &-title h3 {
+      font-size: $fontStandard * 2.8;
+      font-weight: 300;
+      span {
+        color: $brand-color;
+        font-size: $fontStandard * 3.2;
+        font-weight: 700;
+      }
+    }
+    &-text{
+        font-size: $fontStandard *1.2;
+        font-weight: 100;
+        p:first-child{
+            margin-top: $marginStandard;
+
+
+        }
+    }
+  }
+  &__img {
+      height: 100%;
+      width: 100%;
+      background: url('../../images/img1.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      img{
+          width: 100%;
+      }
+  }
+}
