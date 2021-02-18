@@ -6,7 +6,6 @@ Features included in the project:
 
  - React Ready template thanks to @JimmyDCleveland
  - Compilation of ES6 into ES5
- - Splitting Code 💥
  - Source Map
  - Browsers compatibility 
  - Converting SASS into CSS
@@ -14,7 +13,7 @@ Features included in the project:
  - Inline SVG
  - Webpack dev server
  - HMR for hot reloading and faster development
- - Jest environment 😉
+
  
 #### The project is production ready.
  
